@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table >
+    <tr style="width: 50px">
+        <td style="width: 50px">
+            <input type="text" id="x1">
+        </td>
+        <td style="width: 50px">
+            <input type="text" id="x2">
+        </td>
+    </tr>
+    <table>
+        <tr style="width: 50px">
+            <td style="width: 50px">
+                <button type="button" onclick="add()"> Addition </button>
+            </td>
+            <td style="width: 50px">
+                <button type="button" onclick="sub()">Subtraction</button>
+            </td>
+            <td style="width: 50px">
+                <button type="button" onclick="mul()">Multiplication</button>
+            </td>
+            <td style="width: 50px">
+                <button  type="button" onclick="div()">Division</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        function add() {
+            let soA= document.getElementById("x1").value;
+            let soB= document.getElementById("x2").value;
+let add= parseInt(soA)+parseInt(soB);
+alert("kết quả là "+ add);
+        }
+        function sub() {
+            let soA= document.getElementById("x1").value;
+            let soB= document.getElementById("x2").value;
+            let sub= parseInt(soA)-parseInt(soB);
+alert("kết quả là"+ sub);
+        }
+        function mul() {
+            let soA= document.getElementById("x1").value;
+            let soB= document.getElementById("x2").value;
+            let mul= parseInt(soA)*parseInt(soB);
+alert("kết quả là "+ mul);
+        }
+        function div() {
+            let soA= document.getElementById("x1").value;
+            let soB= document.getElementById("x2").value;
+            let div= parseInt(soA)/parseInt(soB);
+            alert("kết quả là "+ div);
+
+        }
+    </script>
+
+</table>
+</body>
+</html>

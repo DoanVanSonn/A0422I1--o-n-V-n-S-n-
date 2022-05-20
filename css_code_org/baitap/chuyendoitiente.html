@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th style="width: 200px">Amount</th>
+        <th style="width: 200px"> From Currency</th>
+        <th style="width: 200px"> To Currency</th>
+    </tr>
+    <tr>
+        <td style="width: 250px">
+            <input type="text" id="amount">
+        </td>
+        <td style="width: 200px">
+          <select id="fr" name="from">
+          <option value="usa"> USA</option>
+              <option value="vnd"> VND</option>
+          </select>
+        </td>
+        <td style="width: 200px">
+            <select id="t" name="to">
+                <option value="usa"> USA</option>
+                <option value="vnd"> VND</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="chuyendoi()"> chuyen doi</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function chuyendoi() {
+        let usd=document.getElementById("fr").value;
+        let vnd=document.getElementById("t").value;
+        let tamount= document.getElementById("amount").value;
+        let a= parseInt(document.getElementById("amount").value);
+        let fro= a/23000;
+        let too= a*23000;
+
+        if (usd=='vnd'&&vnd=='usa')
+            (alert('giá trị là'+ fro));
+        else if (usd=='usa'&&vnd=='vnd')
+            (  (alert('giá trị là'+ too)));
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="averagemath()">Nhập Điểm</button><br>
+<button type="button" onclick="doido()">đổi</button>
+<button type="button" onclick="dientich()">Tính diẹn tính hình tròn</button>
+<button type="button" onclick="chuvi()">Tính chuvi hình tròn</button>
+<script>
+    function averagemath() {
+        let mathScore ;
+        let physicalScore;
+        let chemistryScore;
+        let averageScore= (mathScore+physicalScore+chemistryScore)/3;
+        mathScore= prompt("enter math score");
+        physicalScore= prompt("enter physical score");
+        chemistryScore= prompt("enter chemistry score");
+        let math= parseInt(mathScore);
+        let physical= parseInt(physicalScore);
+        let chemistry= parseInt(chemistryScore);
+        averageScore= (math+physical+chemistry)/3
+        alert('diem trung binh'+ averageScore);
+    }
+    function doido() {
+let doC;
+let doiDo;
+doC= prompt("nhap nhiet do C");
+let c= parseInt(doC);
+doiDo= (c/5)*9+32;
+alert('đổi sang độ F: '+ doiDo)
+    }
+    function dientich() {
+        let banKinh;
+        let s;
+        banKinh= prompt("nhập bán kính");
+        let r= parseInt(banKinh);
+        s=3.14*r*r;
+    }
+    function chuvi() {
+        let banKinh;
+        let c;
+        banKinh= prompt("nhập bán kính");
+        let r= parseInt(banKinh);
+        c=3.14*r*2;
+    }
+</script>
+
+</body>
+</html>
