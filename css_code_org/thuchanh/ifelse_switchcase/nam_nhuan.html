@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> Nhập năm cần kiểm tra</h3>
+<input type="text" id="year">
+<button type="button" onclick="test()"> Kiểm tra</button>
+<script>
+    function test() {
+        let year= document.getElementById("year").value;
+        let y=parseInt(year);
+        let isLeapYear = false;
+
+        let isDivisibleBy4 = y % 4 == 0;
+        if (isDivisibleBy4) {
+            let isDivisibleBy100 = y % 100 == 0;
+            if (isDivisibleBy100) {
+                let isDivisibleBy400 = y % 400 == 0;
+                if (isDivisibleBy400) {
+                    isLeapYear = true;
+                }
+            } else {
+                isLeapYear = true;
+            }
+        }
+
+        if (isLeapYear) {
+            alert(y + " is a leap year");
+        } else {
+            alert(y + " is NOT a leap year");
+        }
+    }
+</script>
+</body>
+</html>
