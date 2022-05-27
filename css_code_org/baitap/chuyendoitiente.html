@@ -11,17 +11,19 @@
         <th style="width: 200px"> From Currency</th>
         <th style="width: 200px"> To Currency</th>
     </tr>
+</table>
+<table>
     <tr>
-        <td style="width: 250px">
+        <td style="width: 250px;">
             <input type="text" id="amount">
         </td>
-        <td style="width: 200px">
-          <select id="fr" name="from">
-          <option value="usa"> USA</option>
-              <option value="vnd"> VND</option>
-          </select>
+        <td style="width: 230px">
+            <select id="fr" name="from">
+                <option value="usa"> USA</option>
+                <option value="vnd"> VND</option>
+            </select>
         </td>
-        <td style="width: 200px">
+        <td style="width: 190px">
             <select id="t" name="to">
                 <option value="usa"> USA</option>
                 <option value="vnd"> VND</option>
@@ -40,8 +42,9 @@
         let a= parseInt(document.getElementById("amount").value);
         let fro= a/23000;
         let too= a*23000;
-
-        if (usd=='vnd'&&vnd=='usa')
+        if (isNaN(tamount)||a<0)
+            (alert("bạn nhập chữ hoặc số âm"))
+        else if (usd=='vnd'&&vnd=='usa')
             (alert('giá trị là'+ fro));
         else if (usd=='usa'&&vnd=='vnd')
             (  (alert('giá trị là'+ too)));
