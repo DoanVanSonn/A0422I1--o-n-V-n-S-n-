@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>nhap so ban muon chon trong khoang tu 0 den so ban nhap</h3>
+<input type="text" id="so">
+<button type="button" id="play" onclick="choi()">choi</button>
+<script>
+function choi() {
+let numbers= document.getElementById("so").value;
+    let i;
+for (i=0;i<=numbers;i++)
+{if (Math.random(parseInt(i*10))==numbers){
+    alert("ban da nhap dung")
+}
+else {alert("ban da nhap sai nhap lai")}}
+}
+
+
+</script>
+</body>
+</html>
