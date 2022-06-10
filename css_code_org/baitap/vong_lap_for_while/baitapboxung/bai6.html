@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n= parseInt(prompt("nhap vao n"));
+    let s=1;
+    if(n%2==0){
+        for (let i=1;i<=n;i=i+2)
+        {
+            s=s*i;
+        }
+    }
+    else {
+        for (let j=2;j<=n;j=j+2){
+            s=s*j;
+        }
+    }
+    alert(s);
+</script>
+</body>
+</html>

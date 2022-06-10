@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap tu Can tra cuu</p>
+<input type="text" id="text">
+<button type="button" onclick="tracuu()"> Tra Cuu</button>
+<script>
+    function tracuu() {
+        let a = ['choi', 'hat', 'nhay', 'du lieu'];
+        let b = ['play', 'sing', 'dance', 'data'];
+        let c = document.getElementById("text").value;
+        let d = c.toString();
+        let e = [];
+        let flag= false;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] == d) {
+                e.push(b[i]);
+                flag=true;
+            }
+        }
+        if (flag==false){
+            document.write("ket qua ban tim khong thay");
+        }
+        document.write(e.join(''))
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="UCLN()">
+    Tính ước chung lớn nhất
+</button>
+<button type="button" onclick="BCNN()">
+    Tính bội chung nhỏ nhất
+</button>
+<script>
+    function UCLN(){
+    let a=parseInt(prompt("nhap so a"));
+    let b=parseInt(prompt("nhap so b"));
+    while(a!=b){
+        if (a>b){
+            a=a-b;
+        }
+        else {
+            b=b-a;
+        }
+    }
+    alert("uoc chung lon nhat la"+a);}
+    function BCNN() {
+        let a=parseInt(prompt("nhap so a"));
+        let b=parseInt(prompt("nhap so b"));
+        let max;
+        let bcnn=1;
+        let i;
+        if (a==0||b==0){
+            alert("so a vaf b khong co BCNN");
+        }
+        else {
+            if (a>b){
+            max= a;
+            }
+            else  max=b;
+        }
+        i=max;
+        while (1){
+            if (i%a==0 && i%b==0){
+                bcnn = i;
+                break;
+            }
+            i+=max;
+        }
+        alert("boi chung nho nhat cua a va b la : "+bcnn);
+
+    }
+
+</script>
+</body>
+</html>
