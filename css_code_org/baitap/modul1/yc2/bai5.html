@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators   =  [5,2,5];
+    let denominators   =  [6,3,4];
+    let maxT,maxM;
+    let chiSo=0;
+    for (let i = 0; i <numerators.length ; i++) {
+            if (numerators[i]/denominators[i]<numerators[i+1]/denominators[i+1]){
+                maxT=numerators[i+1];
+                maxM=denominators[i+1];
+                chiSo=i+1;
+            }
+    }
+    document.write(maxT+"/"+maxM+"la phan so lon nhat co chi so la "+chiSo);
+</script>
+</body>
+</html>
